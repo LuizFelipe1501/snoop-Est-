@@ -22,9 +22,9 @@ export default function SobrePage() {
       <section className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-xl">
-                <Image src={SITE.aboutImg} alt="Clínica" width={700} height={500} className="w-full h-[500px] object-cover" />
+            <div className="relative flex flex-col items-center">
+              <div className="rounded-3xl overflow-hidden shadow-xl w-full">
+                <Image src={SITE.aboutImg} alt="Clínica" width={700} height={500} className="w-full h-[500px] object-cover object-center" />
               </div>
               <div className="absolute -top-5 -right-5 bg-[var(--gold)] text-[var(--bark)] rounded-2xl px-5 py-4 text-center shadow-lg hidden md:block">
                 <strong className="block font-display text-3xl font-bold leading-none">+10</strong>
@@ -109,7 +109,7 @@ export default function SobrePage() {
               </a>
             </div>
             <div className="rounded-3xl overflow-hidden shadow-xl">
-              <Image src={SITE.aboutImg2} alt="Cuidados veterinários" width={700} height={600} className="w-full h-[520px] object-cover" />
+              <Image src={SITE.aboutImg2} alt="Cuidados veterinários" width={700} height={600} className="w-full h-[520px] object-cover object-center" />
             </div>
           </div>
         </div>

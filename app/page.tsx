@@ -55,8 +55,8 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="hidden lg:block relative rounded-3xl overflow-hidden shadow-2xl">
-              <Image src={SITE.heroImg} alt="Clínica" width={900} height={480} className="w-full h-[460px] object-cover" priority />
+            <div className="hidden lg:flex items-center justify-center relative rounded-3xl overflow-hidden shadow-2xl">
+              <Image src={SITE.heroImg} alt="Clínica" width={900} height={480} className="w-full h-[460px] object-cover object-center" priority />
               <div className="absolute bottom-5 left-5 bg-white text-[var(--green)] rounded-2xl px-5 py-3.5 flex items-center gap-3 font-semibold text-sm shadow-lg">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
                 Atendendo agora
@@ -85,9 +85,9 @@ export default function Home() {
       <section className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-xl">
-                <Image src={SITE.aboutImg} alt="Equipe" width={700} height={500} className="w-full h-[500px] object-cover" />
+            <div className="relative flex flex-col items-center">
+              <div className="rounded-3xl overflow-hidden shadow-xl w-full">
+                <Image src={SITE.aboutImg} alt="Equipe" width={700} height={500} className="w-full h-[500px] object-cover object-center" />
               </div>
               <div className="absolute -top-5 -right-5 bg-[var(--gold)] text-[var(--bark)] rounded-2xl px-5 py-4 text-center shadow-lg hidden md:block">
                 <strong className="block font-display text-3xl font-bold leading-none">+10</strong>
@@ -132,7 +132,9 @@ export default function Home() {
             {SERVICES.slice(0, 3).map((svc) => (
               <div key={svc.slug} className="bg-white rounded-2xl overflow-hidden border border-[var(--green-lt)] group hover:-translate-y-1.5 hover:shadow-xl transition-all duration-200 relative">
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--green)] to-[var(--gold)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
-                <Image src={svc.img} alt={svc.title} width={400} height={200} className="w-full h-44 object-cover" />
+                <div className="w-full h-44 overflow-hidden flex items-center justify-center bg-[var(--green-lt)]">
+                  <Image src={svc.img} alt={svc.title} width={400} height={200} className="w-full h-44 object-cover object-center" />
+                </div>
                 <div className="p-6">
                   <h3 className="font-bold text-base mb-2">{svc.title}</h3>
                   <p className="text-sm text-[var(--bark-md)] leading-relaxed">{svc.desc}</p>
@@ -178,8 +180,8 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {TEAM.map((m) => (
               <div key={m.name} className="bg-white rounded-2xl overflow-hidden border border-[var(--green-lt)] group hover:-translate-y-1.5 hover:shadow-xl transition-all duration-200">
-                <div className="overflow-hidden">
-                  <Image src={m.img} alt={m.name} width={300} height={260} className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="overflow-hidden flex items-center justify-center">
+                  <Image src={m.img} alt={m.name} width={300} height={260} className="w-full h-56 object-cover object-center group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-5">
                   <div className="text-[0.7rem] font-bold tracking-widest uppercase text-[var(--green)]">{m.role}</div>

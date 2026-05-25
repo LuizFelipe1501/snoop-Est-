@@ -29,8 +29,8 @@ export default function ServicosPage() {
             {SERVICES.map((svc) => (
               <div key={svc.slug} className="bg-white rounded-2xl overflow-hidden border border-[var(--green-lt)] group hover:-translate-y-1.5 hover:shadow-xl transition-all duration-200 relative">
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--green)] to-[var(--gold)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
-                <div className="overflow-hidden">
-                  <Image src={svc.img} alt={svc.title} width={400} height={200} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="w-full h-48 overflow-hidden flex items-center justify-center bg-[var(--green-lt)]">
+                  <Image src={svc.img} alt={svc.title} width={400} height={200} className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-7">
                   <h3 className="font-bold text-lg mb-2">{svc.title}</h3>

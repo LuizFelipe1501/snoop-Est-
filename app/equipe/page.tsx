@@ -29,8 +29,8 @@ export default function EquipePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
             {TEAM.map((m) => (
               <div key={m.name} className="bg-white rounded-2xl overflow-hidden border border-[var(--green-lt)] group hover:-translate-y-1.5 hover:shadow-xl transition-all duration-200">
-                <div className="overflow-hidden">
-                  <Image src={m.img} alt={m.name} width={300} height={260} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="overflow-hidden flex items-center justify-center">
+                  <Image src={m.img} alt={m.name} width={300} height={260} className="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-5">
                   <div className="text-[0.7rem] font-bold tracking-widest uppercase text-[var(--green)]">{m.role}</div>

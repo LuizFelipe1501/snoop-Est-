@@ -48,7 +48,7 @@ export default function Home() {
               </div>
               <div className="flex gap-10 flex-wrap">
                 {STATS.map((s) => (
-                  <div key={s.value}> 1
+                  <div key={s.value}> 
                     <strong className="block font-display text-4xl font-black text-[var(--gold)] leading-none">{s.value}</strong>
                     <span className="text-xs text-white/60 font-medium mt-1 block">{s.label}</span>
                   </div>

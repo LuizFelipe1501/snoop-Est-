@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --green:    #2d7a4f;
+  --green-md: #3a9962;
+  --green-lt: #e6f4ec;
+  --gold:     #d4a847;
+  --bark:     #3b2b1a;
+  --bark-md:  #6b4f35;
+  --cream:    #faf8f3;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--bark);
+}
+
+.font-display {
+  font-family: var(--font-display) !important;
+}
+
+@keyframes pulse-wa {
+  0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,.5); }
+  50%       { box-shadow: 0 6px 36px rgba(37,211,102,.75); }
+}
+.animate-pulse-wa {
+  animation: pulse-wa 2.5s infinite;
+}
